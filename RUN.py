@@ -37,12 +37,26 @@ while loop == 1:
 		by = int(raw_input("By = "))
 		cx = int(raw_input("Cx = "))
 		cy = int(raw_input("Cy = "))
+		print ""
 		
-		slopeab, slopebc, slopeca = circumcenter.calc(ax, ay, bx, by, cx, cy)
+		#calculate, getting the numerators and denominators of each slope.
+		slopeabn, slopeabd, slopebcn, slopebcd, slopecan, slopecad = circumcenter.calc(ax, ay, bx, by, cx, cy)
 		
-		print "m(AB) =", slopeab
-		print "m(BC) =", slopebc
-		print "m(CA) =", slopeca
+		#print slope, for developement purposes
+		#if slope is undefined, print "N/A"
+		if slopeabd is None:
+			print "m(AB) = N/A"
+		#if not, print value as fraction and decimal
+		else:
+			print "m(AB) = %r/%r (%r)" % (slopeabn, slopeabd, (slopeabn / float(slopeabd)))
+		if slopebcd is None:
+			print "m(BC) = N/A"
+		else:
+			print "m(BC) = %r/%r (%r)" % (slopebcn, slopebcd, (slopebcn / float(slopebcd)))
+		if slopecad is None:
+			print "m(AC) = N/A"
+		else:
+			print "m(AC) = %r/%r (%r)" % (slopecan, slopecad, (slopecan / float(slopecad)))
 	
 	#exit
 	if choice == 3:
