@@ -11,23 +11,15 @@ quad = Quadratic.Quad()
 
 #variables
 loop = 1
+classlist = [add, quad]
 
 #start
 while loop == 1:
     print ""
     choice = prompt.opening()
+    print ""
     
-    #determine
-    #if 1 (Addition)
-    if choice == 1:
-        print ""
-        add.run()
-    
-    #if 2 (Quadratic)
-    if choice == 2:
-        print ""
-        quad.run()
-    
-    #if 3 (Exit)
-    if choice == 3:
+    if choice > len(classlist):
         loop = 0
+    else:
+        classlist[choice - 1].run()

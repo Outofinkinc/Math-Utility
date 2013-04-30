@@ -1,6 +1,6 @@
 import math
 
-prompt = "Quadratic"
+prompt = 'Quadratic'
 
 class Quad:
     

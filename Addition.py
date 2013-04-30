@@ -1,4 +1,4 @@
-prompt = "Addition"
+prompt = 'Addition'
 
 class Add:
     
